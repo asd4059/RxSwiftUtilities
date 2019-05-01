@@ -17,7 +17,7 @@ class TwoWayBindingViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var stackView: UIStackView!
 
-    private let variable = Variable<String?>(nil)
+    private let variable = BehaviorRelay<String?>(value: nil)
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
